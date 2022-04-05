@@ -1,0 +1,23 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{user.name}}</h5>
+        <h6 >{{user.email}}</h6>
+        <p class="card-text">Age:{{ CalculateAge(user.birthday) }}</p>
+
+
+        <p [ngSwitch]="user.contact">prefered contact way:
+
+            <span *ngSwitchCase="'email'">📧</span>
+            <span *ngSwitchCase="'phone'">📱</span>
+            <span *ngSwitchDefault="">i dont want you to talk with me</span>
+
+        </p>
+
+        <p [style.color]="color">floop1</p>
+        <p [style.font-size]="isSpecial ? '40px' : '8px'">floop2</p>
+        <p [ngStyle]="correntStyle">floop3</p>
+        <p [ngClass]="classes" >floop4</p>
+    </div>
+</div>
+
+
